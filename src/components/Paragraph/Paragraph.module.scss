@@ -1,0 +1,26 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+.parent{
+    grid-area: e;
+    display: flex;
+    flex-direction: column;
+}
+.main{ 
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    padding-right: 10rem;
+    color: $faded;
+    @include respond(tab-port){
+        padding-right: 0;
+        height: fit-content;       
+    }
+    &_line{
+        margin-top: 1rem;
+        height: .3rem;
+        background-color: $orange;
+        width: 30%;
+        @include respond(tab-port){
+            margin-top: 0;   
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../sass/mixins";
+.main{
+    grid-area: d;
+    font-size: 8rem;
+    font-weight: 800;
+    font-family: 'Playfair display', sans-serif;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+        height: fit-content;
+        padding: 3rem 0;       
+    }
+}

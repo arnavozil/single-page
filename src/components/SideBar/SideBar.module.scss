@@ -1,0 +1,37 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+.main{
+    grid-area: c;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    @include respond(tab-port){
+        top: 10vh;
+        height: 90vh;
+        width: 100%;
+        left: 0;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding-left: 2rem;
+        position: fixed;       
+        grid-area: unset;
+        background-color: white;
+    }
+    &_item{
+        font-size: 1.75rem;
+        color: $faded;
+        cursor: pointer;
+        &:nth-child(1){
+            text-decoration: line-through $orange .2rem;
+        }
+    }
+    &_button{
+        background-color: $orange;
+        width: 45%;
+        border-radius: 2.5rem;
+        color: $white;
+        padding: 1.35rem 0;
+        font-size: 1.8rem;
+        cursor: pointer;
+        text-align: center;
+    }
+}

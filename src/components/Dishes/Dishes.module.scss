@@ -1,0 +1,24 @@
+@import "../../sass/mixins";
+.main{
+    grid-area: f;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding-top: 5rem;
+    @include respond(tab-port){
+        display: grid;
+        grid-template-columns: repeat(2, 47.5%);
+        grid-gap: 5%;
+        grid-row-gap: 1%;
+        height: 100vh;
+        overflow-x: scroll;
+        padding: 1rem 0;       
+    }
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}

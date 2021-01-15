@@ -1,0 +1,49 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+.main{
+    grid-area: a;
+    margin: 0%;
+    display: flex;
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: "Playfair display", sans-serif;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+
+    @include respond(tab-port){
+        height: fit-content;
+        padding: 1rem 0;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+    &_text{
+        text-align: left;
+        width: 100%;
+        @include respond(tab-port){
+            text-align: center;
+            &:nth-child(3){
+                display: none;
+            }   
+        }
+    }
+    &_icon{
+        display: none;
+        color: $orange;
+        cursor: pointer;
+        font-size: 2.55rem;
+        position: absolute;
+        @include respond(tab-port){
+            display: block;
+        }
+    }
+    &_left{
+        left: 0;
+    }
+    &_right{
+        right: 0;
+        transform: scalex(-1);
+    }
+
+}
